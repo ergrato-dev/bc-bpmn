@@ -35,6 +35,12 @@ Las compuertas (Gateways) controlan el **flujo de decisión**, **divergencia** y
 
 **Regla de oro**: Si una compuerta **diverge** (abre caminos), debe **converger** (cerrarlos) con el mismo tipo de compuerta.
 
+**Diagrama de Comparación Visual**:
+
+![Compuertas - Comparación Completa](../../assets/diagramas/compuertas-comparacion.svg)
+
+> 💡 El diagrama anterior muestra todos los tipos de compuertas con ejemplos de divergencia y convergencia, incluyendo una tabla comparativa completa.
+
 ---
 
 ### 2. Compuerta Exclusiva (Exclusive Gateway) - XOR (15 min)

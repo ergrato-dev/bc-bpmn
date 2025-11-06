@@ -33,6 +33,12 @@ Los eventos representan **algo que sucede** durante el proceso. Son disparadores
 - Afectan el flujo del proceso
 - Pueden tener un "trigger" (disparador)
 
+**Diagrama de Referencia Visual**:
+
+![Eventos Básicos](../../assets/diagramas/eventos-basicos.svg)
+
+> 💡 El diagrama anterior muestra los tres tipos principales de eventos y cómo se usan en un flujo de proceso.
+
 ---
 
 ### 1.2 Evento de Inicio (Start Event)
@@ -198,6 +204,12 @@ Las actividades representan **trabajo que se realiza** en el proceso.
 - Consumen recursos (personas, sistemas)
 - Transforman o generan algo
 - Tienen un verbo de acción
+
+**Diagrama de Referencia Visual**:
+
+![Actividades Básicas](../../assets/diagramas/actividades-basicas.svg)
+
+> 💡 El diagrama anterior ilustra las diferencias entre tareas simples, subprocesos y actividades multi-instancia.
 
 ---
 

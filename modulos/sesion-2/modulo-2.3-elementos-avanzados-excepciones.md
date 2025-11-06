@@ -56,6 +56,12 @@ Los **Boundary Events** (eventos de frontera o límite) son eventos que se **adj
 
 **Función**: Manejar situaciones excepcionales o alternativas durante la ejecución de una tarea.
 
+**Diagrama de Referencia Visual**:
+
+![Boundary Events - Guía Completa](../../assets/diagramas/boundary-events-completo.svg)
+
+> 💡 El diagrama anterior muestra todos los tipos de boundary events (interruptores y no-interruptores) con ejemplos prácticos de cada uno.
+
 #### Tipos de Boundary Events
 
 Los Boundary Events pueden ser:

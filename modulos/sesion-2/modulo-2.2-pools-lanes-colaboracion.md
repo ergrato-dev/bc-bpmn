@@ -107,6 +107,12 @@ Muestra solo el nombre del participante sin detalles internos.
 
 #### Ejemplo Completo: Proceso de Compra Online
 
+**Diagrama de Referencia Visual**:
+
+![Pools, Lanes y Mensajes - Ejemplo Completo](../../assets/diagramas/pools-lanes-ejemplo.svg)
+
+> 💡 El diagrama anterior muestra un ejemplo completo de colaboración entre pools con lanes internas, incluyendo flujos de secuencia y mensajes entre participantes.
+
 ```
 ┌─ Pool: Cliente ──────────────────────────────────────┐
 │ [Inicio] → (Buscar producto) → (Agregar al carrito)  │

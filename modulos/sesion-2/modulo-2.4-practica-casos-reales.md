@@ -82,6 +82,14 @@ Al finalizar este módulo, serás capaz de:
 
 #### Diagrama Completo
 
+**Ejemplo Real Integrado**:
+
+![Proceso de Compra E-commerce - Ejemplo Completo](../../assets/ejemplos/proceso-compra-ecommerce.svg)
+
+> 💡 El diagrama anterior muestra un proceso completo de e-commerce con 4 pools (Cliente, Tienda, Pasarela de Pago, Logística), incluyendo manejo de excepciones, boundary events, compuertas de decisión y flujos de mensajes entre participantes.
+
+#### Análisis del Diagrama
+
 ```
 ┌─ Pool: Cliente ──────────────────────────────────────────────┐
 │                                                               │
@@ -912,6 +920,12 @@ Pool B: ✉️⭕⭕ Recibir mensaje ──→ (Actividad 2)
 5. **Certifícate**: Considera certificaciones BPMN
 
 ### Recursos Adicionales
+
+**Guía de Referencia Rápida**:
+
+![BPMN 2.0 - Referencia Completa](../../assets/referencias/bpmn-referencia-completa.svg)
+
+> 💡 Descarga y guarda esta referencia visual con todos los elementos BPMN 2.0 para consulta rápida durante tu práctica.
 
 **Sitios oficiales**:
 
