@@ -17,6 +17,16 @@ Al finalizar este módulo, serás capaz de:
 
 ---
 
+## 🎥 Video Explicativo
+
+**BPMN: De Confusión a Claridad** - Elementos básicos explicados paso a paso
+
+[![Ver video en Dropbox](https://img.shields.io/badge/▶️_Ver_Video-Dropbox-0061FF?style=for-the-badge&logo=dropbox)](https://www.dropbox.com/scl/fi/s2upgpqfa430owtegq9zx/1.2.BPMN__De_Confusi-n_a_Claridad.mp4?rlkey=rxsa4771k2hptjwl1ecudeurr&st=chc0vfcw&dl=0)
+
+> 💡 **Recomendación**: Este video clarifica los conceptos de eventos, actividades y flujos de manera práctica y visual.
+
+---
+
 ## 📋 Contenido
 
 ## PARTE 1: EVENTOS (40 minutos)
