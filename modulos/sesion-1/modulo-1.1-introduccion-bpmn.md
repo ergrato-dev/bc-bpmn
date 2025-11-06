@@ -17,6 +17,16 @@ Al finalizar este módulo, serás capaz de:
 
 ---
 
+## 🎥 Video Introductorio
+
+**¿Qué es BPMN?** - Introducción al estándar de modelado de procesos de negocio
+
+[![Ver video en Dropbox](https://img.shields.io/badge/▶️_Ver_Video-Dropbox-0061FF?style=for-the-badge&logo=dropbox)](https://www.dropbox.com/scl/fi/l9anfrorakj7cp43jye65/1.1.Que_es_BPMN.mp4?rlkey=170gcglucv6v3d0ttf0ts821x&st=j4r7f1gd&dl=0)
+
+> 💡 **Recomendación**: Mira este video antes de continuar con el contenido del módulo para obtener una visión general del tema.
+
+---
+
 ## 📋 Contenido
 
 ### 1. ¿Qué es BPMN? (15 min)
