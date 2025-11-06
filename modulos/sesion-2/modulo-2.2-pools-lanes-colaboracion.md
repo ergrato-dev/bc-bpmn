@@ -18,6 +18,16 @@ Al finalizar este módulo, serás capaz de:
 
 ---
 
+## 🎥 Video Tutorial
+
+**Modelando la Colaboración** - Pools, Lanes y comunicación entre procesos
+
+[![Ver video en Dropbox](https://img.shields.io/badge/▶️_Ver_Video-Dropbox-0061FF?style=for-the-badge&logo=dropbox)](https://www.dropbox.com/scl/fi/dr0hda10qgyiht18l8596/2.2.Modelando_la_Colaboraci-n.mp4?rlkey=gd04bmlmf14rgwwb13dehm5u7&st=crex94g7&dl=0)
+
+> 💡 **Recomendación**: Este video te enseñará a organizar procesos por participantes, usar swimlanes efectivamente y modelar la comunicación mediante mensajes entre diferentes actores.
+
+---
+
 ## 📋 Contenido
 
 ### 1. Introducción a Swimlanes (10 min)
