@@ -17,6 +17,16 @@ Al finalizar este módulo, serás capaz de:
 
 ---
 
+## 🎥 Video Tutorial
+
+**Blinda Tu Proceso** - Manejo profesional de excepciones y boundary events
+
+[![Ver video en Dropbox](https://img.shields.io/badge/▶️_Ver_Video-Dropbox-0061FF?style=for-the-badge&logo=dropbox)](https://www.dropbox.com/scl/fi/3h7mxvai8ht4byhdku40w/2.3.Blinda_Tu_Proceso.mp4?rlkey=jlwrihutu93u0nx14oo5p21uq&st=r6uy2o1u&dl=0)
+
+> 💡 **Recomendación**: Este video te enseñará a crear procesos robustos y resilientes mediante el uso correcto de boundary events, manejo de errores, timeouts, escalaciones y compensaciones.
+
+---
+
 ## 📋 Contenido
 
 ### 1. Introducción al Manejo de Excepciones (5 min)
