@@ -18,6 +18,16 @@ Al finalizar este módulo, serás capaz de:
 
 ---
 
+## 🎥 Video Tutorial
+
+**Compuertas: Dominando el Flujo** - Aprende a controlar decisiones y rutas en tus procesos
+
+[![Ver video en Dropbox](https://img.shields.io/badge/▶️_Ver_Video-Dropbox-0061FF?style=for-the-badge&logo=dropbox)](https://www.dropbox.com/scl/fi/mhvv5axn4k0lynq1gga29/2.1.Compuertas__Dominando_el_Flujo.mp4?rlkey=89w4reesd9xhst90m5npcil88&st=ary97er4&dl=0)
+
+> 💡 **Recomendación**: Este video te guiará a través de las compuertas XOR, AND, OR y Event-Based con ejemplos prácticos de divergencia y convergencia.
+
+---
+
 ## 📋 Contenido
 
 ### 1. ¿Qué son las Compuertas? (10 min)
