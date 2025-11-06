@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500">
+  <defs>
+    <style>
+      .bg { fill: #1a1a2e; }
+      .title { fill: #ffffff; font-family: 'Inter', sans-serif; font-size: 24px; font-weight: 600; }
+      .subtitle { fill: #b0b0b0; font-family: 'Inter', sans-serif; font-size: 14px; }
+      .label { fill: #ffffff; font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 500; }
+      .small-text { fill: #00d4ff; font-family: 'Inter', sans-serif; font-size: 12px; }
+      .task { fill: #2a2a3e; stroke: #00d4ff; stroke-width: 3; }
+      .subprocess { fill: #2a2a3e; stroke: #00d4ff; stroke-width: 3; }
+      .icon-text { fill: #00d4ff; font-family: 'Inter', sans-serif; font-size: 20px; font-weight: 700; }
+      .multi-line { fill: #00d4ff; stroke: #00d4ff; stroke-width: 2; }
+    </style>
+  </defs>
+  
+  <!-- Background -->
+  <rect class="bg" width="1200" height="500" rx="10"/>
+  
+  <!-- Title -->
+  <text class="title" x="600" y="40" text-anchor="middle">Actividades en BPMN</text>
+  <text class="subtitle" x="600" y="65" text-anchor="middle">Task • Sub-Process • Multi-Instance</text>
+  
+  <!-- Task -->
+  <g transform="translate(100, 130)">
+    <rect class="task" x="0" y="0" width="280" height="100" rx="10"/>
+    <text class="label" x="140" y="55" text-anchor="middle">Validar datos del cliente</text>
+    
+    <text class="label" x="140" y="155" text-anchor="middle">Tarea (Task)</text>
+    <text class="small-text" x="140" y="175" text-anchor="middle">Actividad simple</text>
+    <text class="subtitle" x="140" y="200" text-anchor="middle" font-size="11">Rectángulo redondeado</text>
+    <text class="subtitle" x="140" y="217" text-anchor="middle" font-size="11">Trabajo atómico</text>
+  </g>
+  
+  <!-- Sub-Process -->
+  <g transform="translate(460, 130)">
+    <rect class="subprocess" x="0" y="0" width="280" height="100" rx="10"/>
+    <text class="label" x="140" y="55" text-anchor="middle">Procesar orden completa</text>
+    <!-- Plus icon -->
+    <rect fill="#00d4ff" x="125" y="75" width="30" height="3"/>
+    <rect fill="#00d4ff" x="138.5" y="61.5" width="3" height="30"/>
+    
+    <text class="label" x="140" y="155" text-anchor="middle">Subproceso</text>
+    <text class="small-text" x="140" y="175" text-anchor="middle">(Sub-Process)</text>
+    <text class="subtitle" x="140" y="200" text-anchor="middle" font-size="11">Con símbolo [+]</text>
+    <text class="subtitle" x="140" y="217" text-anchor="middle" font-size="11">Contiene subactividades</text>
+  </g>
+  
+  <!-- Multi-Instance -->
+  <g transform="translate(820, 130)">
+    <rect class="subprocess" x="0" y="0" width="280" height="100" rx="10"/>
+    <text class="label" x="140" y="55" text-anchor="middle">Enviar notificación</text>
+    <!-- Three parallel lines -->
+    <line class="multi-line" x1="110" y1="75" x2="170" y2="75"/>
+    <line class="multi-line" x1="110" y1="82" x2="170" y2="82"/>
+    <line class="multi-line" x1="110" y1="89" x2="170" y2="89"/>
+    
+    <text class="label" x="140" y="155" text-anchor="middle">Multi-Instancia</text>
+    <text class="small-text" x="140" y="175" text-anchor="middle">(Multi-Instance)</text>
+    <text class="subtitle" x="140" y="200" text-anchor="middle" font-size="11">Con tres líneas |||</text>
+    <text class="subtitle" x="140" y="217" text-anchor="middle" font-size="11">Se ejecuta múltiples veces</text>
+  </g>
+  
+  <!-- Examples section -->
+  <g transform="translate(100, 340)">
+    <text class="subtitle" x="0" y="0" font-weight="600" font-size="15">Ejemplos de uso:</text>
+    <text class="subtitle" x="0" y="25" font-size="13">• Task: Revisar documento, Enviar email, Calcular total</text>
+    <text class="subtitle" x="0" y="50" font-size="13">• Sub-Process: Gestión de pedido (incluye: validar, procesar, facturar)</text>
+    <text class="subtitle" x="0" y="75" font-size="13">• Multi-Instance: Notificar a 5 aprobadores en paralelo</text>
+  </g>
+  
+  <!-- Note -->
+  <g transform="translate(50, 460)">
+    <text class="small-text" x="0" y="0" font-size="11">💡 Las actividades representan TRABAJO que se realiza en el proceso</text>
+  </g>
+</svg>

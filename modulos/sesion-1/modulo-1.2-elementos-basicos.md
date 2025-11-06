@@ -28,6 +28,7 @@ Los eventos representan **algo que sucede** durante el proceso. Son disparadores
 **Representación gráfica**: Círculos ⭕
 
 **Características**:
+
 - Ocurren instantáneamente (no consumen tiempo por sí mismos)
 - Afectan el flujo del proceso
 - Pueden tener un "trigger" (disparador)
@@ -41,6 +42,7 @@ Los eventos representan **algo que sucede** durante el proceso. Son disparadores
 **Función**: Marca el comienzo del proceso
 
 **Reglas**:
+
 - ✓ Solo puede haber **un** evento de inicio por proceso (regla general)
 - ✓ **No tiene** flujos entrantes
 - ✓ **Sí tiene** un flujo saliente
@@ -48,13 +50,13 @@ Los eventos representan **algo que sucede** durante el proceso. Son disparadores
 
 #### Tipos Comunes de Eventos de Inicio
 
-| Tipo | Ícono Interno | Cuándo Usar | Ejemplo |
-|------|---------------|-------------|---------|
-| **None** | (vacío) | Inicio genérico | "Día laboral inicia" |
-| **Message** | ✉️ sobre | Llega un mensaje/solicitud | "Cliente envía orden" |
-| **Timer** | ⏰ reloj | Momento temporal específico | "Cada lunes 9am" |
-| **Signal** | 🔺 triángulo | Señal broadcast | "Cierre mensual iniciado" |
-| **Conditional** | 📋 documento | Se cumple una condición | "Stock < mínimo" |
+| Tipo            | Ícono Interno | Cuándo Usar                 | Ejemplo                   |
+| --------------- | ------------- | --------------------------- | ------------------------- |
+| **None**        | (vacío)       | Inicio genérico             | "Día laboral inicia"      |
+| **Message**     | ✉️ sobre      | Llega un mensaje/solicitud  | "Cliente envía orden"     |
+| **Timer**       | ⏰ reloj      | Momento temporal específico | "Cada lunes 9am"          |
+| **Signal**      | 🔺 triángulo  | Señal broadcast             | "Cierre mensual iniciado" |
+| **Conditional** | 📋 documento  | Se cumple una condición     | "Stock < mínimo"          |
 
 #### Ejemplos Reales
 
@@ -73,11 +75,13 @@ Los eventos representan **algo que sucede** durante el proceso. Son disparadores
 #### Buenas Prácticas para Nombrar
 
 ✅ **HACER**:
+
 - "Cliente solicita cotización"
 - "Empleado llega al trabajo"
 - "Sistema detecta error"
 
 ❌ **EVITAR**:
+
 - "Inicio" (muy genérico)
 - "El proceso comienza cuando..." (muy largo)
 - "Iniciar proceso" (redundante)
@@ -100,12 +104,12 @@ Pausa el flujo hasta que el evento ocurra.
 
 **Ejemplos**:
 
-| Tipo | Uso | Ejemplo |
-|------|-----|---------|
-| **Timer** ⏰ | Esperar un tiempo | "Esperar 24 horas" |
-| **Message** ✉️ | Esperar respuesta | "Recibir aprobación del cliente" |
-| **Signal** 🔺 | Esperar señal | "Esperar inicio de producción" |
-| **Conditional** 📋 | Esperar condición | "Hasta que stock > 10" |
+| Tipo               | Uso               | Ejemplo                          |
+| ------------------ | ----------------- | -------------------------------- |
+| **Timer** ⏰       | Esperar un tiempo | "Esperar 24 horas"               |
+| **Message** ✉️     | Esperar respuesta | "Recibir aprobación del cliente" |
+| **Signal** 🔺      | Esperar señal     | "Esperar inicio de producción"   |
+| **Conditional** 📋 | Esperar condición | "Hasta que stock > 10"           |
 
 ```
 (Enviar cotización al cliente)
@@ -123,10 +127,10 @@ No pausa, solo envía.
 
 **Ejemplos**:
 
-| Tipo | Uso | Ejemplo |
-|------|-----|---------|
+| Tipo           | Uso            | Ejemplo                         |
+| -------------- | -------------- | ------------------------------- |
 | **Message** ✉️ | Enviar mensaje | "Enviar notificación por email" |
-| **Signal** 🔺 | Emitir señal | "Avisar a producción iniciar" |
+| **Signal** 🔺  | Emitir señal   | "Avisar a producción iniciar"   |
 
 ```
 (Aprobar orden)
@@ -145,6 +149,7 @@ No pausa, solo envía.
 **Función**: Marca el final del proceso
 
 **Reglas**:
+
 - ✓ Puede haber **múltiples** eventos de fin (diferentes resultados)
 - ✓ **Sí tiene** flujos entrantes
 - ✓ **No tiene** flujos salientes
@@ -152,12 +157,12 @@ No pausa, solo envía.
 
 #### Tipos Comunes de Eventos de Fin
 
-| Tipo | Ícono | Significado | Ejemplo |
-|------|-------|-------------|---------|
-| **None** | (vacío) | Fin normal | "Proceso completado" |
-| **Message** | ✉️ | Envía mensaje final | "Enviar factura al cliente" |
+| Tipo          | Ícono     | Significado                  | Ejemplo                     |
+| ------------- | --------- | ---------------------------- | --------------------------- |
+| **None**      | (vacío)   | Fin normal                   | "Proceso completado"        |
+| **Message**   | ✉️        | Envía mensaje final          | "Enviar factura al cliente" |
 | **Terminate** | ⬛ cuadro | Termina TODAS las instancias | "Cancelar proceso completo" |
-| **Error** | ⚡ rayo | Fin con error | "Proceso falló" |
+| **Error**     | ⚡ rayo   | Fin con error                | "Proceso falló"             |
 
 #### Ejemplo con Múltiples Finales
 
@@ -171,11 +176,11 @@ No pausa, solo envía.
 
 ### 1.5 Tabla Resumen de Eventos
 
-| Posición | Símbolo | Flujos Entrantes | Flujos Salientes | Cantidad |
-|----------|---------|------------------|------------------|----------|
-| **Inicio** | ⭕ | No | Sí (uno) | Uno por proceso |
-| **Intermedio** | ⭕⭕ | Sí | Sí | Varios |
-| **Fin** | ⚫ | Sí | No | Uno o más |
+| Posición       | Símbolo | Flujos Entrantes | Flujos Salientes | Cantidad        |
+| -------------- | ------- | ---------------- | ---------------- | --------------- |
+| **Inicio**     | ⭕      | No               | Sí (uno)         | Uno por proceso |
+| **Intermedio** | ⭕⭕    | Sí               | Sí               | Varios          |
+| **Fin**        | ⚫      | Sí               | No               | Uno o más       |
 
 ---
 
@@ -188,6 +193,7 @@ Las actividades representan **trabajo que se realiza** en el proceso.
 **Representación gráfica**: 📋 Rectángulo con esquinas redondeadas
 
 **Características**:
+
 - Consumen tiempo
 - Consumen recursos (personas, sistemas)
 - Transforman o generan algo
@@ -203,22 +209,23 @@ Las actividades representan **trabajo que se realiza** en el proceso.
 
 #### Tipos de Tareas
 
-| Tipo | Ícono | Descripción | Ejecutada Por | Ejemplo |
-|------|-------|-------------|---------------|---------|
-| **Task** | (vacío) | Tarea genérica | No especificado | "Revisar documento" |
-| **User Task** | 👤 | Tarea manual | Usuario humano | "Aprobar solicitud" |
-| **Service Task** | ⚙️ | Tarea automatizada | Sistema/API | "Consultar base de datos" |
-| **Script Task** | 📜 | Ejecuta script | Motor de proceso | "Calcular total con IVA" |
-| **Send Task** | 📤 | Envía mensaje | Sistema | "Enviar email confirmación" |
-| **Receive Task** | 📥 | Espera mensaje | Sistema | "Recibir confirmación pago" |
-| **Manual Task** | ✋ | Tarea física | Persona (fuera del sistema) | "Imprimir y firmar" |
-| **Business Rule Task** | 📊 | Ejecuta regla | Motor de reglas | "Evaluar riesgo crediticio" |
+| Tipo                   | Ícono   | Descripción        | Ejecutada Por               | Ejemplo                     |
+| ---------------------- | ------- | ------------------ | --------------------------- | --------------------------- |
+| **Task**               | (vacío) | Tarea genérica     | No especificado             | "Revisar documento"         |
+| **User Task**          | 👤      | Tarea manual       | Usuario humano              | "Aprobar solicitud"         |
+| **Service Task**       | ⚙️      | Tarea automatizada | Sistema/API                 | "Consultar base de datos"   |
+| **Script Task**        | 📜      | Ejecuta script     | Motor de proceso            | "Calcular total con IVA"    |
+| **Send Task**          | 📤      | Envía mensaje      | Sistema                     | "Enviar email confirmación" |
+| **Receive Task**       | 📥      | Espera mensaje     | Sistema                     | "Recibir confirmación pago" |
+| **Manual Task**        | ✋      | Tarea física       | Persona (fuera del sistema) | "Imprimir y firmar"         |
+| **Business Rule Task** | 📊      | Ejecuta regla      | Motor de reglas             | "Evaluar riesgo crediticio" |
 
 #### Buenas Prácticas para Nombrar Tareas
 
 **Formato recomendado**: `Verbo + Objeto`
 
 ✅ **HACER**:
+
 - "Validar datos del cliente"
 - "Enviar correo de confirmación"
 - "Calcular monto total"
@@ -226,12 +233,14 @@ Las actividades representan **trabajo que se realiza** en el proceso.
 - "Registrar en sistema"
 
 ❌ **EVITAR**:
+
 - "Validación" (sustantivo)
 - "Datos" (sin verbo)
 - "El sistema debe revisar y validar los datos ingresados por el usuario" (muy largo)
 - "Tarea 1" (no descriptivo)
 
 **Reglas de oro**:
+
 1. Usa verbos en infinitivo o imperativo
 2. Sé específico pero conciso
 3. Máximo 5-7 palabras
@@ -280,6 +289,7 @@ Las actividades representan **trabajo que se realiza** en el proceso.
 #### ¿Cuándo usar un Subproceso?
 
 ✅ **Usar subproceso cuando**:
+
 - Una tarea es demasiado compleja
 - Quieres reutilizar en múltiples lugares
 - Necesitas organizar mejor el diagrama
@@ -287,6 +297,7 @@ Las actividades representan **trabajo que se realiza** en el proceso.
 - Es un proceso estándar conocido
 
 ❌ **NO usar subproceso si**:
+
 - Son solo 2-3 pasos simples
 - No se reutiliza
 - Dificulta la comprensión
@@ -302,33 +313,41 @@ Las actividades representan **trabajo que se realiza** en el proceso.
 #### Tipos
 
 ##### A) Multi-Instance Secuencial
+
 **Símbolo**: ⚊⚊⚊ (líneas horizontales)
 
 **Comportamiento**: Una instancia después de otra
 
 **Ejemplo**:
+
 ```
 📋 "Revisar facturas" ⚊⚊⚊
 ```
+
 Si hay 5 facturas → se revisan una por una en orden.
 
 **Casos de uso**:
+
 - Procesar ítems de una lista en orden
 - Aprobar documentos secuencialmente
 - Validar datos paso a paso
 
 ##### B) Multi-Instance Paralelo
+
 **Símbolo**: ⚊⚊⚊ (líneas verticales)
 
 **Comportamiento**: Todas las instancias simultáneamente
 
 **Ejemplo**:
+
 ```
 📋 "Enviar notificación a aprobadores" ⚊⚊⚊
 ```
+
 Si hay 3 aprobadores → todos reciben notificación al mismo tiempo.
 
 **Casos de uso**:
+
 - Enviar emails a múltiples destinatarios
 - Votación/aprobación paralela
 - Procesamiento en lote
@@ -344,6 +363,7 @@ Si hay 3 aprobadores → todos reciben notificación al mismo tiempo.
 **Función**: Conecta elementos y define el **orden de ejecución**
 
 **Reglas**:
+
 - ✓ Muestra la dirección del flujo
 - ✓ Conecta eventos, actividades y compuertas
 - ✓ **No puede** cruzar boundaries de Pools (usar mensajes)
@@ -372,6 +392,7 @@ Sale de una compuerta, tiene una condición.
 ```
 
 **Buenas prácticas**:
+
 - Etiquetar claramente cada condición
 - Las condiciones deben ser mutuamente excluyentes
 - Todas las salidas deben estar cubiertas
@@ -395,23 +416,23 @@ Se toma cuando **ninguna otra condición** se cumple.
 
 #### ✅ Conexiones Permitidas
 
-| Desde | Hacia | Válido |
-|-------|-------|--------|
-| Evento Inicio | Actividad | ✅ |
-| Evento Inicio | Compuerta | ✅ |
-| Actividad | Actividad | ✅ |
-| Actividad | Compuerta | ✅ |
-| Actividad | Evento Fin | ✅ |
-| Compuerta | Actividad | ✅ |
-| Compuerta | Evento | ✅ |
+| Desde         | Hacia      | Válido |
+| ------------- | ---------- | ------ |
+| Evento Inicio | Actividad  | ✅     |
+| Evento Inicio | Compuerta  | ✅     |
+| Actividad     | Actividad  | ✅     |
+| Actividad     | Compuerta  | ✅     |
+| Actividad     | Evento Fin | ✅     |
+| Compuerta     | Actividad  | ✅     |
+| Compuerta     | Evento     | ✅     |
 
 #### ❌ Conexiones NO Permitidas
 
-| Desde | Hacia | Problema |
-|-------|-------|----------|
-| Evento Inicio | Evento Inicio | No tiene sentido |
-| Evento Fin | Cualquiera | El fin no tiene salida |
-| Cruzar Pools | Usar Flujos | Debe usar mensajes |
+| Desde         | Hacia         | Problema               |
+| ------------- | ------------- | ---------------------- |
+| Evento Inicio | Evento Inicio | No tiene sentido       |
+| Evento Fin    | Cualquiera    | El fin no tiene salida |
+| Cruzar Pools  | Usar Flujos   | Debe usar mensajes     |
 
 ---
 
@@ -428,6 +449,7 @@ Dado el siguiente proceso de "Solicitud de Vacaciones":
 5. Si rechaza → Notificar empleado → Fin (rechazado)
 
 **Tarea**: Identifica:
+
 - ¿Cuántos eventos de inicio hay?
 - ¿Cuántas actividades/tareas hay?
 - ¿Cuántos eventos de fin hay?
@@ -471,12 +493,14 @@ Corrige los siguientes nombres de tareas:
 **Escenario**: Proceso de "Registro de Usuario en Aplicación"
 
 **Descripción**:
+
 1. Usuario ingresa datos
 2. Sistema valida formato de email
 3. Si es válido → Enviar email de confirmación → Esperar clic → Activar cuenta → Fin (éxito)
 4. Si es inválido → Mostrar error → Fin (error)
 
 **Tarea**: Dibuja el diagrama con:
+
 - Eventos de inicio y fin apropiados
 - Actividades bien nombradas
 - Flujos condicionales claros
@@ -511,14 +535,14 @@ Corrige los siguientes nombres de tareas:
 
 ## 🔑 Conceptos Clave para Recordar
 
-| Elemento | Forma | Función | Ejemplo |
-|----------|-------|---------|---------|
-| **Evento Inicio** | ⭕ | Inicia el proceso | "Cliente solicita" |
-| **Evento Intermedio** | ⭕⭕ | Ocurre durante | "Esperar 24h" |
-| **Evento Fin** | ⚫ | Termina el proceso | "Completado" |
-| **Tarea** | 📋 | Trabajo atómico | "Validar datos" |
-| **Subproceso** | 📋[+] | Proceso anidado | "Gestionar pago" |
-| **Flujo** | → | Orden de ejecución | Conexión |
+| Elemento              | Forma | Función            | Ejemplo            |
+| --------------------- | ----- | ------------------ | ------------------ |
+| **Evento Inicio**     | ⭕    | Inicia el proceso  | "Cliente solicita" |
+| **Evento Intermedio** | ⭕⭕  | Ocurre durante     | "Esperar 24h"      |
+| **Evento Fin**        | ⚫    | Termina el proceso | "Completado"       |
+| **Tarea**             | 📋    | Trabajo atómico    | "Validar datos"    |
+| **Subproceso**        | 📋[+] | Proceso anidado    | "Gestionar pago"   |
+| **Flujo**             | →     | Orden de ejecución | Conexión           |
 
 ---
 
@@ -550,6 +574,7 @@ Corrige los siguientes nombres de tareas:
 **Módulo 2.1: Compuertas y Control de Flujo**
 
 Aprenderás:
+
 - Compuerta Exclusiva (XOR)
 - Compuerta Paralela (AND)
 - Compuerta Inclusiva (OR)
@@ -558,4 +583,4 @@ Aprenderás:
 
 ---
 
-*Última actualización: Noviembre 2025*
+_Última actualización: Noviembre 2025_

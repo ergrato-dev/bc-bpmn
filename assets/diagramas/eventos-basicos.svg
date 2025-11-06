@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400">
+  <defs>
+    <style>
+      .bg { fill: #1a1a2e; }
+      .title { fill: #ffffff; font-family: 'Inter', sans-serif; font-size: 24px; font-weight: 600; }
+      .subtitle { fill: #b0b0b0; font-family: 'Inter', sans-serif; font-size: 14px; }
+      .label { fill: #ffffff; font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 500; }
+      .small-text { fill: #00d4ff; font-family: 'Inter', sans-serif; font-size: 12px; }
+      .event-start { fill: none; stroke: #00d4ff; stroke-width: 3; }
+      .event-intermediate { fill: none; stroke: #00d4ff; stroke-width: 3; }
+      .event-end { fill: #00d4ff; stroke: #00d4ff; stroke-width: 3; }
+      .arrow { fill: none; stroke: #ffffff; stroke-width: 2; marker-end: url(#arrowhead); }
+      .icon { fill: none; stroke: #00d4ff; stroke-width: 2; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#ffffff" />
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect class="bg" width="1200" height="400" rx="10"/>
+  
+  <!-- Title -->
+  <text class="title" x="600" y="40" text-anchor="middle">Eventos Básicos en BPMN</text>
+  <text class="subtitle" x="600" y="65" text-anchor="middle">Start Event • Intermediate Event • End Event</text>
+  
+  <!-- Start Event -->
+  <g transform="translate(150, 150)">
+    <circle class="event-start" cx="50" cy="50" r="35"/>
+    <text class="label" x="50" y="130" text-anchor="middle">Evento de Inicio</text>
+    <text class="small-text" x="50" y="150" text-anchor="middle">(Start Event)</text>
+    <text class="subtitle" x="50" y="175" text-anchor="middle" font-size="11">Círculo simple</text>
+    <text class="subtitle" x="50" y="192" text-anchor="middle" font-size="11">Sin flujos entrantes</text>
+  </g>
+  
+  <!-- Intermediate Event -->
+  <g transform="translate(500, 150)">
+    <circle class="event-intermediate" cx="50" cy="50" r="35"/>
+    <circle class="event-intermediate" cx="50" cy="50" r="28"/>
+    <!-- Message icon -->
+    <rect class="icon" x="35" y="42" width="30" height="18" rx="2"/>
+    <path class="icon" d="M 35 42 L 50 52 L 65 42"/>
+    <text class="label" x="50" y="130" text-anchor="middle">Evento Intermedio</text>
+    <text class="small-text" x="50" y="150" text-anchor="middle">(Intermediate Event)</text>
+    <text class="subtitle" x="50" y="175" text-anchor="middle" font-size="11">Círculo doble</text>
+    <text class="subtitle" x="50" y="192" text-anchor="middle" font-size="11">Durante el proceso</text>
+  </g>
+  
+  <!-- End Event -->
+  <g transform="translate(900, 150)">
+    <circle class="event-end" cx="50" cy="50" r="35"/>
+    <text class="label" x="50" y="130" text-anchor="middle">Evento de Fin</text>
+    <text class="small-text" x="50" y="150" text-anchor="middle">(End Event)</text>
+    <text class="subtitle" x="50" y="175" text-anchor="middle" font-size="11">Círculo relleno</text>
+    <text class="subtitle" x="50" y="192" text-anchor="middle" font-size="11">Sin flujos salientes</text>
+  </g>
+  
+  <!-- Flow arrows -->
+  <path class="arrow" d="M 250 200 L 500 200" stroke-dasharray="5,5"/>
+  <path class="arrow" d="M 600 200 L 850 200" stroke-dasharray="5,5"/>
+  
+  <!-- Flow labels -->
+  <text class="subtitle" x="375" y="190" text-anchor="middle" font-size="12">Flujo del proceso →</text>
+  <text class="subtitle" x="725" y="190" text-anchor="middle" font-size="12">Flujo del proceso →</text>
+</svg>

@@ -87,28 +87,33 @@ Este curso está dirigido a:
 
 ---
 
-## 📚 Contenido del Repositorio
+## � Estructura del Repositorio
 
 ```
 bc-bpmn/
-├── README.md                      # Este archivo
-├── .gitignore                     # Configuración Git
-├── _docs/                         # Documentación completa
-│   ├── 01-introduccion.md
-│   ├── 02-elementos-basicos.md
-│   ├── 03-elementos-avanzados.md
-│   ├── 04-mejores-practicas.md
-│   ├── 05-herramientas.md
-│   └── glosario.md
-├── modulos/                       # Módulos del curso
-│   ├── modulo-01/
-│   ├── modulo-02/
-│   ├── modulo-03/
-│   └── modulo-04/
-└── assets/                        # Recursos gráficos
-    ├── diagramas/
-    ├── ejemplos/
-    └── referencias/
+├── README.md                                # ← Estás aquí
+├── .gitignore                               # Configuración Git
+├── _docs/                                   # Documentación complementaria
+│   ├── RESUMEN-EJECUTIVO.md                # Vista general y métricas
+│   ├── INVENTARIO-COMPLETO.md              # Catálogo de materiales
+│   ├── CHEAT-SHEET.md                      # Guía rápida de referencia
+│   ├── INDICE-NAVEGACION.md                # Navegación por temas
+│   ├── GLOSARIO.md                         # Términos y definiciones
+│   └── HERRAMIENTAS.md                     # Software recomendado
+├── modulos/                                 # Contenido del curso
+│   ├── sesion-1/                           # Primera semana
+│   │   ├── modulo-1.1-introduccion-bpmn.md
+│   │   └── modulo-1.2-elementos-basicos.md
+│   └── sesion-2/                           # Segunda semana
+│       ├── modulo-2.1-compuertas.md
+│       ├── modulo-2.2-pools-lanes.md
+│       ├── modulo-2.3-elementos-avanzados.md
+│       └── modulo-2.4-practica-casos-reales.md
+└── assets/                                  # Recursos gráficos
+    ├── banner/                              # Banner del curso
+    ├── diagramas/                           # Diagramas BPMN de referencia
+    ├── ejemplos/                            # Ejemplos visuales
+    └── referencias/                         # Material adicional
 ```
 
 ---
@@ -142,16 +147,16 @@ bc-bpmn/
 
 ---
 
-## 📖 Documentación Principal
+## 📖 Documentación Adicional
 
-La documentación completa está organizada en el directorio `_docs/`:
+La documentación complementaria está en el directorio `_docs/`:
 
-- **[Introducción a BPMN](_docs/01-introduccion.md)**: Conceptos fundamentales
-- **[Elementos Básicos](_docs/02-elementos-basicos.md)**: Notación esencial
-- **[Elementos Avanzados](_docs/03-elementos-avanzados.md)**: Características avanzadas
-- **[Mejores Prácticas](_docs/04-mejores-practicas.md)**: Guías de diseño
-- **[Herramientas](_docs/05-herramientas.md)**: Software y recursos
-- **[Glosario](_docs/glosario.md)**: Términos clave
+- 📋 **[Resumen Ejecutivo](_docs/RESUMEN-EJECUTIVO.md)** - Vista general del curso con métricas y estado
+- 📦 **[Inventario Completo](_docs/INVENTARIO-COMPLETO.md)** - Catálogo exhaustivo de todos los materiales
+- 🔖 **[Cheat Sheet](_docs/CHEAT-SHEET.md)** - Guía rápida de referencia con toda la notación
+- 🗺️ **[Índice de Navegación](_docs/INDICE-NAVEGACION.md)** - Navegación completa por temas
+- 📚 **[Glosario](_docs/GLOSARIO.md)** - Definiciones y términos clave de BPMN
+- 🛠️ **[Herramientas](_docs/HERRAMIENTAS.md)** - Software de modelado recomendado
 
 ---
 

@@ -34,7 +34,7 @@ BPMN crea un **lenguaje visual común** que puede ser entendido por:
 
 #### Definición Formal
 
-> *"BPMN es una notación gráfica estandarizada que describe la lógica de los pasos de un proceso de negocio"*
+> _"BPMN es una notación gráfica estandarizada que describe la lógica de los pasos de un proceso de negocio"_
 
 ---
 
@@ -42,22 +42,24 @@ BPMN crea un **lenguaje visual común** que puede ser entendido por:
 
 #### Cronología del Estándar
 
-| Año | Versión | Hito |
-|-----|---------|------|
-| **2004** | BPMN 1.0 | Primera versión por BPMI (Business Process Management Initiative) |
-| **2006** | BPMN 1.1 | Adopción por OMG tras fusión con BPMI |
-| **2008** | BPMN 1.2 | Mejoras menores y correcciones |
-| **2011** | BPMN 2.0 | Versión actual - Mayor rigurosidad técnica |
-| **2013** | BPMN 2.0.2 | Correcciones y aclaraciones |
+| Año      | Versión    | Hito                                                              |
+| -------- | ---------- | ----------------------------------------------------------------- |
+| **2004** | BPMN 1.0   | Primera versión por BPMI (Business Process Management Initiative) |
+| **2006** | BPMN 1.1   | Adopción por OMG tras fusión con BPMI                             |
+| **2008** | BPMN 1.2   | Mejoras menores y correcciones                                    |
+| **2011** | BPMN 2.0   | Versión actual - Mayor rigurosidad técnica                        |
+| **2013** | BPMN 2.0.2 | Correcciones y aclaraciones                                       |
 
 #### ¿Por qué surgió BPMN?
 
 **Problema Anterior**:
+
 - Múltiples notaciones (diagramas de flujo, UML Activity, IDEF, EPC)
 - Cada organización usaba su propia notación
 - Difícil comunicación entre áreas y organizaciones
 
 **Solución BPMN**:
+
 - Estándar universal único
 - Combina simplicidad visual con rigor técnico
 - Ejecutable en motores BPM
@@ -67,30 +69,35 @@ BPMN crea un **lenguaje visual común** que puede ser entendido por:
 ### 3. Beneficios de Usar BPMN (15 min)
 
 #### 1. **Comunicación Clara**
+
 - Lenguaje visual universal
 - Reduce malentendidos entre áreas
 - Facilita la documentación
 - Mejora el onboarding
 
 #### 2. **Análisis y Mejora de Procesos**
+
 - Identifica cuellos de botella
 - Detecta redundancias
 - Optimiza flujos de trabajo
 - Mide tiempos y costos
 
 #### 3. **Automatización y Transformación Digital**
+
 - Diseño ejecutable en motores BPM
 - Integración con sistemas IT
 - Orquestación de servicios
 - Workflows automatizados
 
 #### 4. **Cumplimiento y Auditoría**
+
 - Documentación de procedimientos
 - Trazabilidad completa
 - Cumplimiento normativo (ISO, SOX, etc.)
 - Evidencia para auditorías
 
 #### 5. **Gestión del Conocimiento**
+
 - Captura de expertise
 - Reducción de errores
 - Estandarización
@@ -101,30 +108,35 @@ BPMN crea un **lenguaje visual común** que puede ser entendido por:
 ### 4. Casos de Uso Reales (15 min)
 
 #### Procesos Administrativos
+
 - ✓ Solicitud de vacaciones
 - ✓ Aprobación de gastos
 - ✓ Gestión de compras
 - ✓ Contratación de personal
 
 #### Procesos de Atención al Cliente
+
 - ✓ Gestión de reclamos
 - ✓ Procesamiento de órdenes
 - ✓ Soporte técnico
 - ✓ Devoluciones y cambios
 
 #### Procesos Financieros
+
 - ✓ Facturación
 - ✓ Reconciliación bancaria
 - ✓ Aprobación de créditos
 - ✓ Cierre contable
 
 #### Procesos de Manufactura
+
 - ✓ Control de calidad
 - ✓ Gestión de inventario
 - ✓ Cadena de suministro
 - ✓ Mantenimiento preventivo
 
 #### Procesos de RRHH
+
 - ✓ Reclutamiento y selección
 - ✓ Evaluación de desempeño
 - ✓ Gestión de nómina
@@ -136,16 +148,18 @@ BPMN crea un **lenguaje visual común** que puede ser entendido por:
 
 #### Proceso de Negocio
 
-> *Conjunto estructurado de actividades que transforman insumos en resultados de valor*
+> _Conjunto estructurado de actividades que transforman insumos en resultados de valor_
 
 **Características de un Proceso**:
+
 - ✓ Tiene **inicio y fin** definidos
 - ✓ Produce un **resultado** específico
 - ✓ Consume **recursos** (tiempo, personas, dinero)
 - ✓ Puede cruzar **múltiples áreas**
 - ✓ Tiene un **propósito** claro
 
-**Ejemplo**: 
+**Ejemplo**:
+
 - **Proceso**: Solicitud de Vacaciones
 - **Inicio**: Empleado solicita vacaciones
 - **Fin**: Vacaciones aprobadas o rechazadas
@@ -155,6 +169,7 @@ BPMN crea un **lenguaje visual común** que puede ser entendido por:
 #### Diagrama de Proceso
 
 Representación gráfica del flujo que muestra:
+
 - **QUÉ** se hace (actividades)
 - **QUIÉN** lo hace (roles/participantes)
 - **CUÁNDO** ocurre (secuencia temporal)
@@ -165,11 +180,13 @@ Representación gráfica del flujo que muestra:
 Ejecución específica de un proceso.
 
 **Ejemplo**:
+
 - **Proceso General**: "Solicitud de Vacaciones"
 - **Instancia #1**: "Juan solicitó 10 días en diciembre"
 - **Instancia #2**: "María solicitó 5 días en enero"
 
 Cada instancia tiene:
+
 - Datos específicos
 - Participantes concretos
 - Fechas reales
@@ -180,6 +197,7 @@ Cada instancia tiene:
 Representa el **flujo de ejecución** a través del proceso.
 
 **Visualización**: Imagina una ficha que se mueve por el diagrama
+
 - ✓ Indica dónde está "activo" el proceso
 - ✓ Ayuda a validar la lógica del flujo
 - ✓ Útil para simulación
@@ -209,7 +227,7 @@ BPMN permite diferentes niveles de detalle según la audiencia:
 **Ejemplo**: Análisis As-Is / To-Be
 
 ```
-[Inicio] → (Validar orden) → ◇¿Stock? 
+[Inicio] → (Validar orden) → ◇¿Stock?
     → Sí → (Pool: Almacén) → (Preparar envío)
     → No → (Notificar cliente) → [Fin cancelado]
 ```
@@ -228,6 +246,7 @@ BPMN permite diferentes niveles de detalle según la audiencia:
 #### 1. Diagrama de Proceso (Process Diagram)
 
 El más común. Muestra:
+
 - Flujo de actividades
 - Decisiones y caminos alternativos
 - Puede mostrar interacciones entre participantes
@@ -237,6 +256,7 @@ El más común. Muestra:
 #### 2. Diagrama de Colaboración (Collaboration Diagram)
 
 Muestra interacción entre múltiples procesos/participantes:
+
 - Usa Pools (participantes) y Lanes (roles)
 - Enfoque en mensajería
 - Procesos públicos vs privados
@@ -246,6 +266,7 @@ Muestra interacción entre múltiples procesos/participantes:
 #### 3. Diagrama de Coreografía (Choreography Diagram)
 
 Foco en el intercambio de mensajes:
+
 - Sin detalles internos de participantes
 - Solo interacciones
 - Útil para procesos B2B
@@ -261,17 +282,20 @@ Foco en el intercambio de mensajes:
 El estándar se compone de:
 
 #### Elementos Básicos
+
 - **Eventos**: Inicio, Intermedio, Fin
 - **Actividades**: Tareas, Subprocesos
 - **Compuertas**: Exclusiva, Paralela, Inclusiva
 - **Flujos**: Secuencia, Mensaje
 
 #### Elementos Avanzados
+
 - **Swimlanes**: Pools, Lanes
 - **Artefactos**: Anotaciones, Grupos
 - **Datos**: Objetos de datos, Almacenes, Mensajes
 
 #### Atributos Técnicos
+
 - Propiedades de elementos
 - Expresiones y condiciones
 - Configuración de servicios
@@ -283,6 +307,7 @@ El estándar se compone de:
 ### Proceso: "Preparar Café en la Oficina"
 
 **Descripción textual**:
+
 1. Empleado quiere café
 2. Revisar si hay café
 3. Si hay → Preparar café → Servir
@@ -292,8 +317,8 @@ El estándar se compone de:
 **Diagrama BPMN simplificado**:
 
 ```
-[Inicio: Quiero café] 
-  → (Revisar disponibilidad) 
+[Inicio: Quiero café]
+  → (Revisar disponibilidad)
   → ◇ ¿Hay café?
       ├─ Sí → (Preparar café)
       └─ No → (Ir a comprar) → (Preparar café)
@@ -302,6 +327,7 @@ El estándar se compone de:
 ```
 
 **Elementos identificados**:
+
 - `[Inicio]` = Evento de Inicio (círculo simple)
 - `(Actividad)` = Tarea (rectángulo redondeado)
 - `◇` = Compuerta Exclusiva (rombo con X)
@@ -313,27 +339,32 @@ El estándar se compone de:
 ## 🎓 Principios del Buen Modelado
 
 ### 1. Claridad sobre Completitud
+
 - Mejor un diagrama simple y claro que uno complejo y confuso
 - No incluyas detalles innecesarios para tu audiencia
 - Usa el nivel adecuado
 
 ### 2. Consistencia
+
 - Usa la notación correctamente según el estándar
 - Mantén un estilo uniforme
 - Convenciones de nombres coherentes
 
 ### 3. Propósito Definido
+
 - Define PARA QUÉ es el diagrama
 - Define PARA QUIÉN es el diagrama
 - Ajusta el nivel de detalle
 
 ### 4. Validación
+
 - Verifica que el flujo sea lógicamente correcto
 - Simula mentalmente el recorrido del token
 - Revisa con expertos del proceso
 - Busca caminos sin salida
 
 ### 5. Documentación Complementaria
+
 - BPMN muestra el "cómo"
 - Documentos complementarios explican el "por qué"
 - Usa anotaciones cuando sea necesario
@@ -342,28 +373,28 @@ El estándar se compone de:
 
 ## 📊 Comparación: Antes vs Después de BPMN
 
-| Aspecto | Sin BPMN | Con BPMN |
-|---------|----------|----------|
-| **Comunicación** | Cada área usa su notación | Lenguaje común |
-| **Documentación** | Texto, diagramas informales | Diagramas estándar |
-| **Análisis** | Difícil identificar problemas | Análisis visual claro |
-| **Automatización** | Implementación desde cero | Diseño ejecutable |
-| **Capacitación** | Lenta, por experiencia | Rápida, con diagramas |
-| **Mejora continua** | Reactiva | Proactiva |
+| Aspecto             | Sin BPMN                      | Con BPMN              |
+| ------------------- | ----------------------------- | --------------------- |
+| **Comunicación**    | Cada área usa su notación     | Lenguaje común        |
+| **Documentación**   | Texto, diagramas informales   | Diagramas estándar    |
+| **Análisis**        | Difícil identificar problemas | Análisis visual claro |
+| **Automatización**  | Implementación desde cero     | Diseño ejecutable     |
+| **Capacitación**    | Lenta, por experiencia        | Rápida, con diagramas |
+| **Mejora continua** | Reactiva                      | Proactiva             |
 
 ---
 
 ## 🔑 Conceptos Clave para Recordar
 
-| Concepto | Descripción |
-|----------|-------------|
-| **BPMN** | Estándar internacional ISO para modelar procesos |
-| **OMG** | Organización que mantiene el estándar |
-| **Proceso** | Secuencia estructurada con inicio, actividades y fin |
-| **Diagrama** | Representación gráfica del proceso |
-| **Token** | Concepto que representa el flujo de ejecución |
-| **Instancia** | Ejecución específica de un proceso |
-| **Nivel** | Grado de detalle del modelo (Descriptivo, Analítico, Ejecutable) |
+| Concepto      | Descripción                                                      |
+| ------------- | ---------------------------------------------------------------- |
+| **BPMN**      | Estándar internacional ISO para modelar procesos                 |
+| **OMG**       | Organización que mantiene el estándar                            |
+| **Proceso**   | Secuencia estructurada con inicio, actividades y fin             |
+| **Diagrama**  | Representación gráfica del proceso                               |
+| **Token**     | Concepto que representa el flujo de ejecución                    |
+| **Instancia** | Ejecución específica de un proceso                               |
+| **Nivel**     | Grado de detalle del modelo (Descriptivo, Analítico, Ejecutable) |
 
 ---
 
@@ -372,15 +403,15 @@ El estándar se compone de:
 Piensa en tu trabajo diario y responde:
 
 1. **¿Qué proceso realizado en tu área podría beneficiarse de ser modelado en BPMN?**
-   
+
    _Ejemplo: Aprobación de facturas, gestión de incidencias, onboarding_
 
 2. **¿Quiénes serían los participantes (roles) en ese proceso?**
-   
+
    _Ejemplo: Solicitante, Aprobador, Contabilidad, Tesorería_
 
 3. **¿Cuál sería el resultado esperado del proceso?**
-   
+
    _Ejemplo: Factura aprobada y pagada_
 
 4. **¿Qué nivel de detalle necesitarías? (Descriptivo/Analítico/Ejecutable)**
@@ -390,16 +421,19 @@ Piensa en tu trabajo diario y responde:
 ## 📚 Recursos Complementarios
 
 ### Documentación Oficial
+
 - [OMG BPMN 2.0 Specification](https://www.omg.org/spec/BPMN/2.0/)
 - [BPMN.org - Guías rápidas](https://www.bpmn.org/)
 - [BPMN Poster](https://www.bpmn.org/bpmn-poster/)
 
 ### Libros Recomendados
+
 - **"BPMN Method and Style"** - Bruce Silver (Nivel intermedio)
 - **"Real-Life BPMN"** - Jakob Freund & Bernd Rücker (Nivel avanzado)
 - **"BPMN 2.0 Handbook"** - Varios autores (Referencia completa)
 
 ### Comunidades
+
 - BPMN Forum en LinkedIn
 - BPM Stack Exchange
 - Camunda Community
@@ -438,6 +472,7 @@ Antes de continuar, asegúrate de poder responder:
 **Módulo 1.2: Elementos Básicos - Eventos**
 
 En el próximo módulo aprenderás:
+
 - Los 3 tipos de eventos (Inicio, Intermedio, Fin)
 - Diferentes triggers de eventos
 - Cómo y cuándo usar cada tipo
@@ -448,6 +483,7 @@ En el próximo módulo aprenderás:
 ## 📝 Notas del Instructor
 
 **Tiempo sugerido por sección**:
+
 - ¿Qué es BPMN?: 15 min
 - Historia: 10 min
 - Beneficios: 15 min
@@ -461,6 +497,7 @@ En el próximo módulo aprenderás:
 **Total**: 90 minutos
 
 **Tips de enseñanza**:
+
 - Usar ejemplos del contexto de los participantes
 - Fomentar la participación con preguntas
 - Mostrar diagramas reales de la organización si es posible
@@ -468,4 +505,4 @@ En el próximo módulo aprenderás:
 
 ---
 
-*Última actualización: Noviembre 2025*
+_Última actualización: Noviembre 2025_

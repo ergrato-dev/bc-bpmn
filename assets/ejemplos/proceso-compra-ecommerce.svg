@@ -1,0 +1,281 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+  <defs>
+    <style>
+      .bg { fill: #1a1a2e; }
+      .title { fill: #ffffff; font-family: 'Inter', sans-serif; font-size: 22px; font-weight: 600; }
+      .subtitle { fill: #b0b0b0; font-family: 'Inter', sans-serif; font-size: 12px; }
+      .label { fill: #ffffff; font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 500; }
+      .small-text { fill: #00d4ff; font-family: 'Inter', sans-serif; font-size: 9px; }
+      .pool { fill: none; stroke: #00d4ff; stroke-width: 2.5; }
+      .pool-label { fill: #ffffff; font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 700; }
+      .lane-bg { fill: #1f1f2e; }
+      .task-rect { fill: #2a2a3e; stroke: #ffffff; stroke-width: 1.8; }
+      .gateway { fill: #2a2a3e; stroke: #00d4ff; stroke-width: 2; }
+      .event { fill: none; stroke: #00d4ff; stroke-width: 2; }
+      .event-end { fill: #00d4ff; stroke: #00d4ff; stroke-width: 2; }
+      .event-error { fill: #ff6b6b; stroke: #ff6b6b; stroke-width: 2; }
+      .arrow { fill: none; stroke: #ffffff; stroke-width: 1.5; marker-end: url(#arrowhead); }
+      .message { fill: none; stroke: #ff6b6b; stroke-width: 1.5; stroke-dasharray: 3,3; marker-end: url(#message-arrow); }
+      .condition { fill: #b0b0b0; font-family: 'Inter', sans-serif; font-size: 8px; }
+    </style>
+    <marker id="arrowhead" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#ffffff" />
+    </marker>
+    <marker id="message-arrow" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#ff6b6b" />
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect class="bg" width="1600" height="900" rx="10"/>
+  
+  <!-- Title -->
+  <text class="title" x="800" y="35" text-anchor="middle">Ejemplo Completo: Proceso de Compra E-commerce</text>
+  <text class="subtitle" x="800" y="55" text-anchor="middle">Colaboración entre Cliente, Tienda, Pasarela de Pago y Logística</text>
+  
+  <!-- Pool 1: Cliente -->
+  <g transform="translate(50, 90)">
+    <rect class="pool" x="0" y="0" width="1500" height="140" rx="5"/>
+    <text class="pool-label" x="15" y="75" writing-mode="tb" transform="rotate(180 15 75)">Cliente</text>
+    <rect class="lane-bg" x="40" y="5" width="1455" height="130"/>
+    
+    <!-- Process -->
+    <circle class="event" cx="80" cy="70" r="14"/>
+    <path class="arrow" d="M 94 70 L 120 70"/>
+    
+    <rect class="task-rect" x="120" y="50" width="90" height="40" rx="4"/>
+    <text class="label" x="165" y="73" text-anchor="middle">Buscar productos</text>
+    <path class="arrow" d="M 210 70 L 230 70"/>
+    
+    <rect class="task-rect" x="230" y="50" width="90" height="40" rx="4"/>
+    <text class="label" x="275" y="73" text-anchor="middle">Agregar carrito</text>
+    <path class="arrow" d="M 320 70 L 340 70"/>
+    
+    <rect class="task-rect" x="340" y="50" width="90" height="40" rx="4"/>
+    <text class="label" x="385" y="73" text-anchor="middle">Confirmar orden</text>
+    
+    <!-- Message to store -->
+    <circle fill="#ff6b6b" cx="430" cy="70" r="3"/>
+    <path class="message" d="M 430 90 L 430 240"/>
+    <text class="subtitle" x="435" y="165" font-size="8">Orden</text>
+    
+    <!-- Wait for confirmation -->
+    <path class="arrow" d="M 430 70 L 450 70"/>
+    <circle class="event" cx="470" cy="70" r="14"/>
+    <circle class="event" cx="470" cy="70" r="10"/>
+    <rect fill="none" stroke="#00d4ff" stroke-width="1.5" x="464" y="64" width="12" height="9" rx="1"/>
+    <text class="small-text" x="470" y="105" text-anchor="middle">Esperar</text>
+    
+    <!-- Decision -->
+    <path class="arrow" d="M 484 70 L 510 70"/>
+    <g transform="translate(510, 30)">
+      <rect class="gateway" width="40" height="40" rx="3" transform="rotate(45 20 20)"/>
+      <text fill="#00d4ff" x="20" y="25" text-anchor="middle" font-size="16">X</text>
+    </g>
+    
+    <!-- OK path -->
+    <path class="arrow" d="M 550 50 L 580 50"/>
+    <text class="condition" x="555" y="48">Stock OK</text>
+    <rect class="task-rect" x="580" y="30" width="80" height="40" rx="4"/>
+    <text class="label" x="620" y="53" text-anchor="middle">Realizar pago</text>
+    
+    <!-- No stock path -->
+    <path class="arrow" d="M 550 70 L 550 110 L 1350 110"/>
+    <text class="condition" x="555" y="108">Sin stock</text>
+    <circle class="event-error" cx="1370" cy="110" r="14"/>
+    <text class="small-text" x="1370" y="135" text-anchor="middle">Fin: Sin stock</text>
+    
+    <!-- Payment wait -->
+    <path class="arrow" d="M 660 50 L 680 50"/>
+    <circle class="event" cx="700" cy="50" r="14"/>
+    <circle class="event" cx="700" cy="50" r="10"/>
+    
+    <!-- Payment decision -->
+    <path class="arrow" d="M 714 50 L 740 50"/>
+    <g transform="translate(740, 10)">
+      <rect class="gateway" width="40" height="40" rx="3" transform="rotate(45 20 20)"/>
+      <text fill="#00d4ff" x="20" y="25" text-anchor="middle" font-size="16">X</text>
+    </g>
+    
+    <!-- Payment OK -->
+    <path class="arrow" d="M 780 30 L 820 30"/>
+    <text class="condition" x="785" y="28">Pago OK</text>
+    <rect class="task-rect" x="820" y="10" width="90" height="40" rx="4"/>
+    <text class="label" x="865" y="33" text-anchor="middle">Recibir producto</text>
+    
+    <path class="arrow" d="M 910 30 L 940 30"/>
+    <circle class="event-end" cx="955" cy="30" r="14"/>
+    <text class="small-text" x="955" y="55" text-anchor="middle">Fin: OK</text>
+    
+    <!-- Payment Failed -->
+    <path class="arrow" d="M 780 50 L 780 90 L 1280 90"/>
+    <text class="condition" x="785" y="88">Pago rechazado</text>
+    <circle class="event-error" cx="1300" cy="90" r="14"/>
+    <text class="small-text" x="1300" y="115" text-anchor="middle">Fin: Pago fallido</text>
+  </g>
+  
+  <!-- Pool 2: Tienda -->
+  <g transform="translate(50, 260)">
+    <rect class="pool" x="0" y="0" width="1500" height="220" rx="5"/>
+    <text class="pool-label" x="15" y="115" writing-mode="tb" transform="rotate(180 15 115)">Tienda</text>
+    <rect class="lane-bg" x="40" y="5" width="1455" height="210"/>
+    
+    <!-- Receive order -->
+    <circle class="event" cx="430" cy="110" r="14"/>
+    <rect fill="#ff6b6b" x="424" y="104" width="12" height="9" rx="1"/>
+    <text class="small-text" x="430" y="135" text-anchor="middle">Orden</text>
+    
+    <path class="arrow" d="M 444 110 L 470 110"/>
+    
+    <rect class="task-rect" x="470" y="90" width="90" height="40" rx="4"/>
+    <text class="label" x="515" y="113" text-anchor="middle">Verificar stock</text>
+    
+    <!-- Gateway -->
+    <path class="arrow" d="M 560 110 L 590 110"/>
+    <g transform="translate(590, 70)">
+      <rect class="gateway" width="40" height="40" rx="3" transform="rotate(45 20 20)"/>
+      <text fill="#00d4ff" x="20" y="25" text-anchor="middle" font-size="16">X</text>
+    </g>
+    
+    <!-- Stock OK -->
+    <path class="arrow" d="M 630 90 L 660 90"/>
+    <text class="condition" x="635" y="88">Sí</text>
+    <rect class="task-rect" x="660" y="70" width="80" height="40" rx="4"/>
+    <text class="label" x="700" y="93" text-anchor="middle">Reservar stock</text>
+    
+    <!-- Message to cliente (stock OK) -->
+    <circle fill="#ff6b6b" cx="740" cy="90" r="3"/>
+    <path class="message" d="M 740 90 L 740 70 L 470 70 L 470 200"/>
+    
+    <!-- No stock -->
+    <path class="arrow" d="M 630 110 L 630 160 L 740 160"/>
+    <text class="condition" x="635" y="158">No</text>
+    <rect class="task-rect" x="740" y="140" width="90" height="40" rx="4"/>
+    <text class="label" x="785" y="163" text-anchor="middle">Notificar sin stock</text>
+    
+    <!-- Message to cliente (no stock) -->
+    <circle fill="#ff6b6b" cx="830" cy="160" r="3"/>
+    <path class="message" d="M 830 160 L 850 160 L 850 30 L 530 30 L 530 200"/>
+    
+    <path class="arrow" d="M 830 160 L 860 160"/>
+    <circle class="event-end" cx="878" cy="160" r="14"/>
+    
+    <!-- Continue with stock OK -->
+    <path class="arrow" d="M 740 90 L 770 90"/>
+    <rect class="task-rect" x="770" y="70" width="90" height="40" rx="4"/>
+    <text class="label" x="815" y="93" text-anchor="middle">Enviar a pago</text>
+    
+    <!-- Message to payment gateway -->
+    <circle fill="#ff6b6b" cx="860" cy="90" r="3"/>
+    <path class="message" d="M 860 90 L 860 490"/>
+    <text class="subtitle" x="865" y="290" font-size="8">Solicitud</text>
+    
+    <!-- Wait payment result -->
+    <path class="arrow" d="M 860 90 L 880 90"/>
+    <circle class="event" cx="900" cy="90" r="14"/>
+    <circle class="event" cx="900" cy="90" r="10"/>
+    
+    <!-- Payment result gateway -->
+    <path class="arrow" d="M 914 90 L 940 90"/>
+    <g transform="translate(940, 50)">
+      <rect class="gateway" width="40" height="40" rx="3" transform="rotate(45 20 20)"/>
+      <text fill="#00d4ff" x="20" y="25" text-anchor="middle" font-size="16">X</text>
+    </g>
+    
+    <!-- Payment OK -->
+    <path class="arrow" d="M 980 70 L 1010 70"/>
+    <text class="condition" x="985" y="68">OK</text>
+    <rect class="task-rect" x="1010" y="50" width="90" height="40" rx="4"/>
+    <text class="label" x="1055" y="73" text-anchor="middle">Confirmar orden</text>
+    
+    <!-- Message to logistics -->
+    <circle fill="#ff6b6b" cx="1100" cy="70" r="3"/>
+    <path class="message" d="M 1100 70 L 1100 630"/>
+    
+    <!-- Message to cliente (payment OK) -->
+    <path class="arrow" d="M 1100 70 L 1130 70"/>
+    <path class="message" d="M 1130 70 L 1150 70 L 1150 50 L 700 50 L 700 200"/>
+    
+    <circle class="event-end" cx="1145" cy="70" r="14"/>
+    
+    <!-- Payment Failed -->
+    <path class="arrow" d="M 980 90 L 980 130 L 1055 130"/>
+    <text class="condition" x="985" y="128">Fallo</text>
+    <rect class="task-rect" x="1055" y="110" width="90" height="40" rx="4"/>
+    <text class="label" x="1100" y="133" text-anchor="middle">Liberar stock</text>
+    
+    <!-- Message to cliente (payment failed) -->
+    <circle fill="#ff6b6b" cx="1145" cy="130" r="3"/>
+    <path class="message" d="M 1145 130 L 1170 130 L 1170 50 L 780 50 L 780 200"/>
+    
+    <path class="arrow" d="M 1145 130 L 1175 130"/>
+    <circle class="event-end" cx="1193" cy="130" r="14"/>
+  </g>
+  
+  <!-- Pool 3: Pasarela Pago (collapsed) -->
+  <g transform="translate(50, 510)">
+    <rect class="pool" x="0" y="0" width="1500" height="80" rx="5"/>
+    <text class="pool-label" x="750" y="45" text-anchor="middle">Pasarela de Pago (Black Box)</text>
+    
+    <!-- Input message -->
+    <circle fill="#ff6b6b" cx="860" cy="40" r="3"/>
+    
+    <!-- Output message -->
+    <circle fill="#ff6b6b" cx="900" cy="40" r="3"/>
+    <path class="message" d="M 900 40 L 900 280"/>
+    <text class="subtitle" x="905" y="160" font-size="8">Resultado</text>
+  </g>
+  
+  <!-- Pool 4: Logística -->
+  <g transform="translate(50, 620)">
+    <rect class="pool" x="0" y="0" width="1500" height="140" rx="5"/>
+    <text class="pool-label" x="15" y="75" writing-mode="tb" transform="rotate(180 15 75)">Logística</text>
+    <rect class="lane-bg" x="40" y="5" width="1455" height="130"/>
+    
+    <!-- Receive order -->
+    <circle class="event" cx="1100" cy="70" r="14"/>
+    <rect fill="#ff6b6b" x="1094" y="64" width="12" height="9" rx="1"/>
+    
+    <path class="arrow" d="M 1114 70 L 1140 70"/>
+    
+    <rect class="task-rect" x="1140" y="50" width="90" height="40" rx="4"/>
+    <text class="label" x="1185" y="73" text-anchor="middle">Preparar envío</text>
+    
+    <path class="arrow" d="M 1230 70 L 1260 70"/>
+    
+    <rect class="task-rect" x="1260" y="50" width="90" height="40" rx="4"/>
+    <text class="label" x="1305" y="73" text-anchor="middle">Entregar</text>
+    
+    <path class="arrow" d="M 1350 70 L 1380 70"/>
+    
+    <circle class="event-end" cx="1395" cy="70" r="14"/>
+  </g>
+  
+  <!-- Legend -->
+  <g transform="translate(50, 800)">
+    <text class="label" x="0" y="0" font-size="12" font-weight="600">Elementos usados:</text>
+    
+    <g transform="translate(150, -10)">
+      <rect class="gateway" width="20" height="20" rx="2" transform="rotate(45 10 10)"/>
+      <text class="subtitle" x="30" y="13" font-size="10">Compuertas XOR (decisiones)</text>
+    </g>
+    
+    <g transform="translate(350, -10)">
+      <line class="message" x1="0" y1="10" x2="30" y2="10"/>
+      <text class="subtitle" x="40" y="13" font-size="10">Mensajes entre Pools</text>
+    </g>
+    
+    <g transform="translate(550, -10)">
+      <circle class="event" cx="10" cy="10" r="8"/>
+      <circle class="event" cx="10" cy="10" r="6"/>
+      <text class="subtitle" x="25" y="13" font-size="10">Eventos intermedios</text>
+    </g>
+    
+    <g transform="translate(750, -10)">
+      <circle class="event-end" cx="10" cy="10" r="8"/>
+      <text class="subtitle" x="25" y="13" font-size="10">Múltiples finales</text>
+    </g>
+    
+    <text class="small-text" x="0" y="35" font-size="9">💡 Este diagrama muestra colaboración compleja: 4 participantes, decisiones, excepciones y comunicación asíncrona</text>
+  </g>
+</svg>

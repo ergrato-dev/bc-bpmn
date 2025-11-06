@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 800">
+  <defs>
+    <style>
+      .bg { fill: #1a1a2e; }
+      .title { fill: #ffffff; font-family: 'Inter', sans-serif; font-size: 24px; font-weight: 600; }
+      .subtitle { fill: #b0b0b0; font-family: 'Inter', sans-serif; font-size: 14px; }
+      .label { fill: #ffffff; font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 500; }
+      .small-text { fill: #00d4ff; font-family: 'Inter', sans-serif; font-size: 11px; }
+      .pool { fill: none; stroke: #00d4ff; stroke-width: 3; }
+      .pool-label { fill: #ffffff; font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 700; }
+      .lane { fill: none; stroke: #00d4ff; stroke-width: 2; stroke-dasharray: 5,5; }
+      .lane-bg { fill: #1f1f2e; }
+      .lane-label { fill: #b0b0b0; font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600; }
+      .task-rect { fill: #2a2a3e; stroke: #ffffff; stroke-width: 2; }
+      .event { fill: none; stroke: #00d4ff; stroke-width: 2; }
+      .event-end { fill: #00d4ff; stroke: #00d4ff; stroke-width: 2; }
+      .arrow { fill: none; stroke: #ffffff; stroke-width: 2; marker-end: url(#arrowhead); }
+      .message { fill: none; stroke: #ff6b6b; stroke-width: 2; stroke-dasharray: 3,3; marker-end: url(#message-arrow); }
+      .message-text { fill: #ff6b6b; font-family: 'Inter', sans-serif; font-size: 10px; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#ffffff" />
+    </marker>
+    <marker id="message-arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#ff6b6b" />
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect class="bg" width="1400" height="800" rx="10"/>
+  
+  <!-- Title -->
+  <text class="title" x="700" y="40" text-anchor="middle">Pools y Lanes en BPMN</text>
+  <text class="subtitle" x="700" y="65" text-anchor="middle">Organización por participantes y roles</text>
+  
+  <!-- Pool 1: Cliente -->
+  <g transform="translate(100, 100)">
+    <rect class="pool" x="0" y="0" width="1200" height="200" rx="5"/>
+    <text class="pool-label" x="20" y="105" writing-mode="tb" transform="rotate(180 20 105)">POOL: Cliente</text>
+    
+    <!-- Lane background -->
+    <rect class="lane-bg" x="60" y="10" width="1130" height="180"/>
+    
+    <!-- Process flow -->
+    <circle class="event" cx="120" cy="100" r="20"/>
+    <text class="small-text" x="120" y="135" text-anchor="middle">Inicio</text>
+    
+    <path class="arrow" d="M 140 100 L 180 100"/>
+    
+    <rect class="task-rect" x="180" y="75" width="140" height="50" rx="5"/>
+    <text class="label" x="250" y="105" text-anchor="middle">Solicitar producto</text>
+    
+    <path class="arrow" d="M 320 100 L 360 100"/>
+    
+    <rect class="task-rect" x="360" y="75" width="140" height="50" rx="5"/>
+    <text class="label" x="430" y="105" text-anchor="middle">Confirmar orden</text>
+    
+    <!-- Message sent -->
+    <circle fill="#ff6b6b" cx="500" cy="100" r="4"/>
+    <text class="message-text" x="510" y="103">mensaje</text>
+    
+    <path class="arrow" d="M 500 100 L 540 100"/>
+    
+    <rect class="task-rect" x="540" y="75" width="140" height="50" rx="5"/>
+    <text class="label" x="610" y="105" text-anchor="middle">Recibir producto</text>
+    
+    <path class="arrow" d="M 680 100 L 720 100"/>
+    
+    <circle class="event-end" cx="740" cy="100" r="20"/>
+    <text class="small-text" x="740" y="135" text-anchor="middle">Fin</text>
+  </g>
+  
+  <!-- Message flow between pools -->
+  <path class="message" d="M 430 300 L 430 380"/>
+  <text class="message-text" x="440" y="340">Envía solicitud</text>
+  
+  <path class="message" d="M 610 480 L 610 300"/>
+  <text class="message-text" x="620" y="390">Entrega producto</text>
+  
+  <!-- Pool 2: Empresa (with Lanes) -->
+  <g transform="translate(100, 380)">
+    <rect class="pool" x="0" y="0" width="1200" height="350" rx="5"/>
+    <text class="pool-label" x="20" y="175" writing-mode="tb" transform="rotate(180 20 175)">POOL: Empresa</text>
+    
+    <!-- Lane 1: Ventas -->
+    <line class="lane" x1="60" y1="0" x2="60" y2="350"/>
+    <line class="lane" x1="60" y1="175" x2="1200" y2="175"/>
+    <rect class="lane-bg" x="60" y="10" width="1130" height="155"/>
+    <text class="lane-label" x="80" y="92" writing-mode="tb" transform="rotate(180 80 92)">Ventas</text>
+    
+    <!-- Ventas process -->
+    <circle class="event" cx="140" cy="90" r="15"/>
+    <rect fill="#ff6b6b" x="133" y="83" width="14" height="10" rx="1"/>
+    <path fill="none" stroke="#ff6b6b" stroke-width="1" d="M 133 83 L 140 88 L 147 83"/>
+    
+    <path class="arrow" d="M 155 90 L 180 90"/>
+    
+    <rect class="task-rect" x="180" y="70" width="130" height="40" rx="5"/>
+    <text class="label" x="245" y="95" text-anchor="middle" font-size="12">Validar orden</text>
+    
+    <path class="arrow" d="M 310 90 L 350 90"/>
+    
+    <rect class="task-rect" x="350" y="70" width="130" height="40" rx="5"/>
+    <text class="label" x="415" y="95" text-anchor="middle" font-size="12">Crear pedido</text>
+    
+    <path class="arrow" d="M 480 90 L 520 90"/>
+    
+    <rect class="task-rect" x="520" y="70" width="130" height="40" rx="5"/>
+    <text class="label" x="585" y="95" text-anchor="middle" font-size="12">Notificar logística</text>
+    
+    <!-- Message to Logistics lane -->
+    <circle fill="#00d4ff" cx="585" cy="110" r="3"/>
+    
+    <!-- Lane 2: Logística -->
+    <rect class="lane-bg" x="60" y="185" width="1130" height="155"/>
+    <text class="lane-label" x="80" y="267" writing-mode="tb" transform="rotate(180 80 267)">Logística</text>
+    
+    <!-- Logistics process -->
+    <circle class="event" cx="585" cy="265" r="15"/>
+    <rect fill="#00d4ff" x="578" y="258" width="14" height="10" rx="1"/>
+    
+    <path class="arrow" d="M 600 265 L 630 265"/>
+    
+    <rect class="task-rect" x="630" y="245" width="130" height="40" rx="5"/>
+    <text class="label" x="695" y="270" text-anchor="middle" font-size="12">Preparar envío</text>
+    
+    <path class="arrow" d="M 760 265 L 800 265"/>
+    
+    <rect class="task-rect" x="800" y="245" width="130" height="40" rx="5"/>
+    <text class="label" x="865" y="270" text-anchor="middle" font-size="12">Entregar</text>
+    
+    <path class="arrow" d="M 930 265 L 970 265"/>
+    
+    <circle class="event-end" cx="985" cy="265" r="15"/>
+    
+    <!-- Internal message -->
+    <path stroke="#00d4ff" stroke-width="1.5" stroke-dasharray="2,2" d="M 585 110 L 585 250" marker-end="url(#arrowhead)"/>
+    <text class="small-text" x="595" y="180" font-size="9">Mensaje interno</text>
+  </g>
+  
+  <!-- Legend -->
+  <g transform="translate(100, 750)">
+    <text class="label" x="0" y="0" font-size="13">Conceptos clave:</text>
+    <line stroke="#00d4ff" stroke-width="3" x1="150" y1="-5" x2="200" y2="-5"/>
+    <text class="subtitle" x="210" y="0" font-size="11">Pool (participante)</text>
+    
+    <line stroke="#00d4ff" stroke-width="2" stroke-dasharray="5,5" x1="350" y1="-5" x2="400" y2="-5"/>
+    <text class="subtitle" x="410" y="0" font-size="11">Lane (rol interno)</text>
+    
+    <line stroke="#ff6b6b" stroke-width="2" stroke-dasharray="3,3" x1="550" y1="-5" x2="600" y2="-5" marker-end="url(#message-arrow)"/>
+    <text class="subtitle" x="610" y="0" font-size="11">Mensaje entre pools</text>
+    
+    <line stroke="#ffffff" stroke-width="2" x1="800" y1="-5" x2="850" y2="-5" marker-end="url(#arrowhead)"/>
+    <text class="subtitle" x="860" y="0" font-size="11">Flujo de secuencia</text>
+  </g>
+</svg>
