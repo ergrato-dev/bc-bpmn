@@ -1,0 +1,53 @@
+# IDEs y Editores
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Archivos temporales
+*.tmp
+*.bak
+*.log
+.cache/
+
+# Archivos de sistema
+Thumbs.db
+desktop.ini
+
+# Node modules (si se usa alguna herramienta)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python (si se usa para scripts)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+
+# Archivos de build
+dist/
+build/
+*.egg-info/
+
+# Archivos personales de notas
+notas_personales/
+*.draft
+
+# Archivos de backup de diagramas
+*.bpmn.bak
+*.bpmn~
+
+# Videos del curso (archivos pesados)
+videos/
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.webm
